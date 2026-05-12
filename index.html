@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6B1040" />
+
+  <title>Adriana Maia Studio — Especialista em Sobrancelhas em Joinville/SC</title>
+  <meta name="description" content="Sobrancelhas que transformam seu olhar. Mais de 1.000 clientes atendidas, premiada em excelência. Flow Brows, Brow Lamination, Lash Lifting em Joinville/SC. Agende pelo WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://adrianamaiastudio.com.br/" />
+  <meta property="og:title"       content="Adriana Maia Studio — Especialista em Sobrancelhas" />
+  <meta property="og:description" content="+1.000 clientes com olhares transformados. Premiada em excelência. Joinville/SC." />
+  <meta property="og:image"       content="images/AdrianaFoto.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Adriana Maia Studio",
+    "description": "Especialista em sobrancelhas e estética facial premium em Joinville/SC",
+    "telephone": "+55-47-99958-1632",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Servidão Antônio João de Oliveira, 93",
+      "addressLocality": "Joinville",
+      "addressRegion": "SC",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://www.instagram.com/adrianamaiastudio/"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="images/AdrianaHero.png" />
+
+  <!-- Favicon -->
+  <link rel="icon"             type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon"                  href="images/favicon.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- CURSOR CUSTOMIZADO -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <a href="#hero" aria-label="Adriana Maia Studio — Início">
+      <img src="images/logo-letras.png" alt="Adriana Maia Studio" class="header__logo" width="auto" height="52" />
+    </a>
+
+    <nav class="header__nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio!"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-gold" style="padding:.55em 1.4em; font-size:.7rem;">
+        Agendar
+      </a>
+    </nav>
+
+    <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menu mobile overlay -->
+  <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <a href="#servicos"  class="mobile-link">Serviços</a>
+    <a href="#sobre"     class="mobile-link">Sobre</a>
+    <a href="#galeria"   class="mobile-link">Galeria</a>
+    <a href="#contato"   class="mobile-link">Contato</a>
+    <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio!"
+       target="_blank" rel="noopener noreferrer" class="btn btn-gold mobile-link">
+      Agendar via WhatsApp
+    </a>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Apresentação">
+
+      <div class="hero__content">
+        <p class="hero__label" data-reveal="fade-up">Estética Facial Premium · Joinville/SC</p>
+
+        <h1 class="hero__headline display" data-reveal="fade-up" style="--reveal-delay:100ms">
+          Seu olhar<br/>merece<br/>o melhor.
+        </h1>
+
+        <p class="hero__sub" data-reveal="fade-up" style="--reveal-delay:200ms">
+          <span>+1.000 mulheres</span> com olhares transformados
+        </p>
+
+        <div class="hero__cta-group" data-reveal="fade-up" style="--reveal-delay:300ms">
+          <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio+no+Adriana+Maia+Studio!"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-gold">
+            <!-- WhatsApp icon -->
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Agendar via WhatsApp
+          </a>
+          <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+        </div>
+      </div>
+
+      <div class="hero__image-wrap">
+        <div class="hero__deco" aria-hidden="true"></div>
+        <img
+          src="images/AdrianaHero.png"
+          alt="Adriana Maia — Especialista em sobrancelhas"
+          class="hero__photo"
+          width="530" height="700"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Rolar</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CREDENCIAIS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="credentials" aria-label="Números e conquistas">
+      <div class="container">
+
+        <div class="ornament" aria-hidden="true">
+          <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+        </div>
+
+        <div class="credentials__grid">
+          <div class="cred-item" data-reveal="fade-up">
+            <span class="cred-item__number" data-counter data-target="1000" data-prefix="+" data-suffix="">+1.000</span>
+            <p class="cred-item__label">clientes atendidas</p>
+          </div>
+          <div class="cred-item" data-reveal="fade-up" style="--reveal-delay:100ms">
+            <span class="cred-item__number">★</span>
+            <p class="cred-item__label">Premiada em Excelência</p>
+          </div>
+          <div class="cred-item" data-reveal="fade-up" style="--reveal-delay:200ms">
+            <span class="cred-item__number title" style="font-size:clamp(1rem,2vw,1.4rem); color:var(--vinho); line-height:1.2;">Natália<br/>Beauty</span>
+            <p class="cred-item__label">Formação oficial</p>
+          </div>
+        </div>
+
+        <div class="ornament" aria-hidden="true">
+          <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SERVIÇOS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="services section-pad" id="servicos" aria-label="Serviços">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="label-tag" data-reveal="fade-up">O que fazemos</p>
+          <h2 class="title" data-reveal="fade-up" style="--reveal-delay:100ms">
+            Transformação que começa<br/>no detalhe.
+          </h2>
+          <div class="ornament" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+          </div>
+        </header>
+
+        <div class="services-grid">
+
+          <!-- Sobrancelhas -->
+          <article class="service-card" data-reveal="scale-up">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M6 22 Q22 10 38 22" stroke-linecap="round"/>
+                <path d="M8 26 Q22 14 36 24" stroke-linecap="round" opacity=".4"/>
+              </svg>
+            </div>
+            <p class="service-card__category">Sobrancelhas</p>
+            <h3>Design & Modelagem</h3>
+            <ul>
+              <li>Design Personalizado</li>
+              <li>Flow Brows</li>
+              <li>Brow Lamination</li>
+              <li>Protocolo de Regeneração</li>
+            </ul>
+          </article>
+
+          <!-- Olhos -->
+          <article class="service-card" data-reveal="scale-up" style="--reveal-delay:80ms">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M4 22 Q22 8 40 22 Q22 36 4 22Z" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="5"/>
+              </svg>
+            </div>
+            <p class="service-card__category">Olhos</p>
+            <h3>Realce do Olhar</h3>
+            <ul>
+              <li>Lash Lifting</li>
+              <li>Fios Wild</li>
+            </ul>
+          </article>
+
+          <!-- Lábios -->
+          <article class="service-card" data-reveal="scale-up" style="--reveal-delay:160ms">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M10 22 Q22 14 34 22 Q22 32 10 22Z" stroke-linecap="round"/>
+                <path d="M10 22 Q22 20 34 22" stroke-linecap="round" opacity=".5"/>
+              </svg>
+            </div>
+            <p class="service-card__category">Lábios</p>
+            <h3>Revitalização Labial</h3>
+            <ul>
+              <li>Revitalização Labial</li>
+            </ul>
+          </article>
+
+          <!-- Cabelos -->
+          <article class="service-card" data-reveal="scale-up" style="--reveal-delay:240ms">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M14 8 Q10 22 14 36" stroke-linecap="round"/>
+                <path d="M22 6 Q18 22 22 38" stroke-linecap="round"/>
+                <path d="M30 8 Q34 22 30 36" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="service-card__category">Cabelos</p>
+            <h3>Regeneração Capilar</h3>
+            <ul>
+              <li>Protocolo de Regeneração Capilar</li>
+            </ul>
+          </article>
+
+          <!-- Formação -->
+          <article class="service-card" data-reveal="scale-up" style="--reveal-delay:320ms">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M6 18 L22 10 L38 18 L22 26 L6 18Z" stroke-linejoin="round"/>
+                <path d="M14 22v8c4 3 12 3 16 0v-8" stroke-linecap="round"/>
+                <path d="M38 18v8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="service-card__category">Formação</p>
+            <h3>Cursos Profissionais</h3>
+            <ul>
+              <li>Cursos na área de beleza</li>
+              <li>Formação completa</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div style="text-align:center; margin-top:var(--space-8)" data-reveal="fade-up">
+          <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+servi%C3%A7os!"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-gold">
+            Consultar disponibilidade
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SOBRE
+    ═══════════════════════════════════════════════════════ -->
+    <section class="about section-pad" id="sobre" aria-label="Sobre Adriana Maia">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__content">
+            <p class="label-tag about__label" data-reveal="fade-up">Sobre mim</p>
+            <h2 class="title" data-reveal="fade-up" style="--reveal-delay:80ms">
+              Cuidar de si<br/>é honrar quem você é.
+            </h2>
+
+            <p class="text-mid" data-reveal="fade-up" style="--reveal-delay:160ms">
+              Sou Adriana Maia, especialista em estética facial com foco em sobrancelhas e realce do olhar. Nascida e criada em Joinville/SC, dedico minha carreira a revelar a beleza autêntica de cada mulher — com técnica, intenção e muito cuidado.
+            </p>
+            <p class="text-mid" data-reveal="fade-up" style="--reveal-delay:220ms">
+              Formada pela renomada escola <strong>Natália Beauty</strong>, busco constantemente a excelência. Cada atendimento é único — porque cada olhar conta uma história diferente, e merece ser contado com arte.
+            </p>
+
+            <div class="about__achievements" data-reveal="fade-up" style="--reveal-delay:300ms">
+              <div class="achievement-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+                  <circle cx="9" cy="9" r="8" stroke="#C9A96E" stroke-width="1.2"/>
+                  <path d="M5.5 9l2.5 2.5 5-5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Mais de <strong>1.000 clientes</strong> atendidas em Joinville e região</span>
+              </div>
+              <div class="achievement-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+                  <circle cx="9" cy="9" r="8" stroke="#C9A96E" stroke-width="1.2"/>
+                  <path d="M5.5 9l2.5 2.5 5-5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Premiada em <strong>Excelência</strong> no segmento de beleza</span>
+              </div>
+              <div class="achievement-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+                  <circle cx="9" cy="9" r="8" stroke="#C9A96E" stroke-width="1.2"/>
+                  <path d="M5.5 9l2.5 2.5 5-5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Certificada pelo <strong>método Natália Beauty</strong></span>
+              </div>
+              <div class="achievement-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+                  <circle cx="9" cy="9" r="8" stroke="#C9A96E" stroke-width="1.2"/>
+                  <path d="M5.5 9l2.5 2.5 5-5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Especialista em <strong>Flow Brows, Brow Lamination e Lash Lifting</strong></span>
+              </div>
+            </div>
+
+            <div data-reveal="fade-up" style="--reveal-delay:380ms; margin-top:var(--space-4)">
+              <a href="https://wa.me/5547999581632?text=Ol%C3%A1+Adriana%2C+gostaria+de+conhecer+melhor+seu+trabalho!"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-gold">
+                Falar com a Adriana
+              </a>
+            </div>
+          </div>
+
+          <div class="about__img-wrap" data-reveal="fade-left">
+            <img
+              src="images/AdrianaFoto2.png"
+              alt="Adriana Maia em ambiente de trabalho"
+              class="about__photo"
+              width="420" height="420"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         GALERIA
+    ═══════════════════════════════════════════════════════ -->
+    <section class="gallery section-pad" id="galeria" aria-label="Galeria de resultados">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="label-tag" data-reveal="fade-up">Resultados reais</p>
+          <h2 class="title" data-reveal="fade-up" style="--reveal-delay:80ms">
+            Transformações que<br/>falam por si.
+          </h2>
+          <div class="ornament" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+          </div>
+        </header>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="gallery-item" data-reveal="fade-up" data-img="images/Cliente01.png">
+            <img src="images/Cliente01.png" alt="Resultado sobrancelhas — Design Personalizado" width="400" height="400" loading="lazy" decoding="async" />
+            <div class="gallery-item__overlay"><span>Design Personalizado</span></div>
+          </div>
+
+          <div class="gallery-item" data-reveal="fade-up" style="--reveal-delay:80ms" data-img="images/Cliente02.png">
+            <img src="images/Cliente02.png" alt="Resultado sobrancelhas — Lash Lifting" width="400" height="400" loading="lazy" decoding="async" />
+            <div class="gallery-item__overlay"><span>Lash Lifting</span></div>
+          </div>
+
+          <div class="gallery-item" data-reveal="fade-up" style="--reveal-delay:160ms" data-img="images/Cliente03.png">
+            <img src="images/Cliente03.png" alt="Resultado sobrancelhas — Flow Brows" width="400" height="400" loading="lazy" decoding="async" />
+            <div class="gallery-item__overlay"><span>Flow Brows</span></div>
+          </div>
+
+          <div class="gallery-item" data-reveal="fade-up" style="--reveal-delay:240ms" data-img="images/Cliente04.png">
+            <img src="images/Cliente04.png" alt="Resultado sobrancelhas — Brow Lamination" width="400" height="400" loading="lazy" decoding="async" />
+            <div class="gallery-item__overlay"><span>Brow Lamination</span></div>
+          </div>
+
+          <div class="gallery-item" data-reveal="fade-up" style="--reveal-delay:320ms" data-img="images/Cliente05.png">
+            <img src="images/Cliente05.png" alt="Resultado sobrancelhas — Design Personalizado" width="400" height="400" loading="lazy" decoding="async" />
+            <div class="gallery-item__overlay"><span>Design Personalizado</span></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lightbox dialog (nativo HTML5) -->
+    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 3l10 10M13 3L3 13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <img id="lightboxImg" src="" alt="" />
+    </dialog>
+
+    <!-- ═══════════════════════════════════════════════════════
+         DEPOIMENTOS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="testimonials section-pad" aria-label="Depoimentos de clientes">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="label-tag" data-reveal="fade-in" style="color:var(--gold-light)">O que dizem</p>
+          <h2 class="title" data-reveal="fade-up" style="--reveal-delay:80ms; color:var(--white)">
+            Mulheres que<br/>transformaram seu olhar.
+          </h2>
+        </header>
+
+        <div class="testimonials-wrapper">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote class="testimonial-card__text">
+                "Nunca imaginei que sobrancelhas pudessem mudar tanto minha expressão. A Adriana tem um olho incrível para entender o que cada rosto precisa. Resultado impecável!"
+              </blockquote>
+              <p class="testimonial-card__author">— Mariana S., Joinville/SC</p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote class="testimonial-card__text">
+                "Fiz o Lash Lifting e me apaixonei. Acordar com os cílios curvados e definidos sem esforço é simplesmente incrível. Voltarei sempre!"
+              </blockquote>
+              <p class="testimonial-card__author">— Ana Paula R., Joinville/SC</p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote class="testimonial-card__text">
+                "O Flow Brows ficou perfeito! Sobrancelhas que parecem naturais mas completamente definidas. Recebi elogios de todo mundo. Profissional excepcional."
+              </blockquote>
+              <p class="testimonial-card__author">— Fernanda L., Jaraguá do Sul/SC</p>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars" aria-label="5 estrelas">★★★★★</div>
+              <blockquote class="testimonial-card__text">
+                "Ambiente aconchegante, atendimento super cuidadoso e resultado que superou todas as minhas expectativas. A Adriana é apaixonada pelo que faz, e isso se reflete no trabalho."
+              </blockquote>
+              <p class="testimonial-card__author">— Camila B., Joinville/SC</p>
+            </article>
+
+          </div>
+
+          <div class="testimonials-nav" aria-label="Navegar depoimentos">
+            <button id="prevBtn" aria-label="Depoimento anterior">
+              <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                <path d="M11 14L6 9l5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button id="nextBtn" aria-label="Próximo depoimento">
+              <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
+                <path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CTA FINAL
+    ═══════════════════════════════════════════════════════ -->
+    <section class="cta-final" id="contato" aria-label="Agendamento">
+      <div class="container">
+        <p class="label-tag" data-reveal="fade-in">Seu próximo passo</p>
+        <h2 class="display" data-reveal="fade-up" style="--reveal-delay:80ms">
+          Pronta para transformar<br/>seu olhar?
+        </h2>
+        <p data-reveal="fade-up" style="--reveal-delay:180ms">
+          Agende pelo WhatsApp e garanta seu horário.<br/>Atendimento personalizado em Joinville/SC.
+        </p>
+        <div data-reveal="fade-up" style="--reveal-delay:280ms">
+          <a href="https://wa.me/5547999581632?text=Ol%C3%A1+Adriana%2C+gostaria+de+agendar+um+hor%C3%A1rio!"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-gold">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Agendar agora — (47) 99958-1632
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Links do rodapé">
+          <a href="#servicos">Serviços</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#galeria">Galeria</a>
+          <a href="https://www.instagram.com/adrianamaiastudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+
+        <div class="footer__logo-wrap">
+          <img src="images/logo-letras.png" alt="Adriana Maia Studio" class="footer__logo" loading="lazy" />
+        </div>
+
+        <address class="footer__contact" style="font-style:normal">
+          <a href="https://wa.me/5547999581632" target="_blank" rel="noopener noreferrer" class="highlight">(47) 99958-1632</a>
+          <a href="https://www.instagram.com/adrianamaiastudio/" target="_blank" rel="noopener noreferrer">@adrianamaiastudio</a>
+          <span style="color:rgba(255,255,255,.4); font-size:.8rem;">Servidão Antônio João de Oliveira, 93<br/>Joinville/SC</span>
+          <a href="https://mycardbio.com/adrianamaiastudio" target="_blank" rel="noopener noreferrer" style="font-size:.8rem">mycardbio.com/adrianamaiastudio</a>
+        </address>
+      </div>
+
+      <p class="footer__bottom">
+        © 2025 Adriana Maia Studio · Joinville, Santa Catarina · Todos os direitos reservados
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio+no+Adriana+Maia+Studio!"
+     target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float"
+     aria-label="Falar no WhatsApp — (47) 99958-1632">
+    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
