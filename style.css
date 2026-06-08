@@ -615,6 +615,17 @@ ul, ol { list-style: none; }
   border-bottom: 1px solid rgba(201,169,110,.35);
   margin-bottom: 0;
 }
+.gallery-section__sub {
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--text-sm);
+  letter-spacing: .14em;
+  color: var(--gold, #C9A96E);
+  text-transform: uppercase;
+  margin-top: .5em;
+  margin-bottom: 0;
+}
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
