@@ -174,4 +174,19 @@
     });
   });
 
+  /* ── AUTOPLAY VÍDEO AO ENTRAR NA TELA ──────────────────── */
+  const premioVideo = document.getElementById('premioPremioVideo');
+  if (premioVideo) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          premioVideo.play().catch(() => {});
+        } else {
+          premioVideo.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+    videoObserver.observe(premioVideo);
+  }
+
 })();

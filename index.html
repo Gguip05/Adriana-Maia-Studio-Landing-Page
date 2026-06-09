@@ -43,7 +43,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <!-- Preload LCP image -->
-  <link rel="preload" as="image" href="images/AdrianaHero.png" />
+  <link rel="preload" as="image" href="images/AdrianaFoto.webp" />
 
   <!-- Favicon -->
   <link rel="icon"             type="image/png" href="images/favicon.png" />
@@ -69,6 +69,8 @@
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
       <a href="#galeria">Galeria</a>
+      <a href="#premiacoes">Premiações</a>
+      <a href="#cursos">Cursos</a>
       <a href="#contato">Contato</a>
       <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio!"
          target="_blank" rel="noopener noreferrer"
@@ -86,8 +88,10 @@
   <div class="header__mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
     <a href="#servicos"  class="mobile-link">Serviços</a>
     <a href="#sobre"     class="mobile-link">Sobre</a>
-    <a href="#galeria"   class="mobile-link">Galeria</a>
-    <a href="#contato"   class="mobile-link">Contato</a>
+    <a href="#galeria"      class="mobile-link">Galeria</a>
+    <a href="#premiacoes"   class="mobile-link">Premiações</a>
+    <a href="#cursos"       class="mobile-link">Cursos</a>
+    <a href="#contato"      class="mobile-link">Contato</a>
     <a href="https://wa.me/5547999581632?text=Ol%C3%A1%2C+gostaria+de+agendar+um+hor%C3%A1rio!"
        target="_blank" rel="noopener noreferrer" class="btn btn-gold mobile-link">
       Agendar via WhatsApp
@@ -105,7 +109,7 @@
         <p class="hero__label" data-reveal="fade-up">Estética Facial Premium · Joinville/SC</p>
 
         <h1 class="hero__headline display" data-reveal="fade-up" style="--reveal-delay:100ms">
-          Seu olhar<br/>em destaque.
+          Busque expressão real.<br/>Não busque simetria perfeita.
         </h1>
 
         <p class="hero__sub" data-reveal="fade-up" style="--reveal-delay:200ms">
@@ -128,13 +132,15 @@
 
       <div class="hero__image-wrap">
         <div class="hero__deco" aria-hidden="true"></div>
-        <img
-          src="images/AdrianaHero.png"
-          alt="Adriana Maia — Especialista em sobrancelhas"
-          class="hero__photo"
-          width="530" height="700"
-          fetchpriority="high"
-        />
+        <div class="hero__photo-frame">
+          <img
+            src="images/AdrianaFoto.webp"
+            alt="Adriana Maia — Especialista em sobrancelhas"
+            class="hero__photo"
+            width="530" height="700"
+            fetchpriority="high"
+          />
+        </div>
       </div>
 
       <div class="hero__scroll-hint" aria-hidden="true">
@@ -385,7 +391,7 @@
 
           <div class="about__img-wrap" data-reveal="fade-left">
             <img
-              src="images/AdrianaFoto2.png"
+              src="images/AdrianaFoto02.webp"
               alt="Adriana Maia em ambiente de trabalho"
               class="about__photo"
               width="420" height="420"
@@ -448,7 +454,7 @@
         </div>
 
         <!-- SEÇÃO 2: PROTOCOLO REGENERAÇÃO DE FIOS -->
-        <div class="gallery-section">
+        <div class="gallery-section" id="galleryGrid2">
           <h3 class="gallery-section__title" data-reveal="fade-up">Protocolo Regeneração de Fios</h3>
           <div class="gallery-grid">
 
@@ -482,7 +488,7 @@
           <div class="gallery-grid gallery-grid--centered">
 
             <div class="gallery-item" data-reveal="fade-up" data-img="images/Cliente12.webp">
-              <img src="images/Cliente12.webp" alt="Resultado — Revitalização Labial" width="400" height="400" loading="lazy" decoding="async" />
+              <img src="images/Cliente12.webp" alt="Resultado — Revitalização Labial" width="400" height="400" loading="lazy" decoding="async" style="transform: rotate(180deg);" />
               <div class="gallery-item__overlay"><span>Revitalização Labial</span></div>
             </div>
 
@@ -511,6 +517,98 @@
       </button>
       <img id="lightboxImg" src="" alt="" />
     </dialog>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PREMIAÇÕES
+    ═══════════════════════════════════════════════════════ -->
+    <section class="premiacoes section-pad" id="premiacoes" aria-label="Premiações e formações">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="label-tag" data-reveal="fade-up">Reconhecimento</p>
+          <h2 class="title" data-reveal="fade-up" style="--reveal-delay:100ms">
+            Premiações.
+          </h2>
+          <div class="ornament" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+          </div>
+          <p class="premiacoes__intro" data-reveal="fade-up" style="--reveal-delay:180ms">
+            Anos de dedicação reconhecidos em prêmios e formações que reforçam o compromisso com a excelência em cada atendimento.
+          </p>
+        </header>
+
+        <div class="premiacoes-grid">
+
+          <!-- col 1, row 1: 02 topo + 01 fundo (fim com fim de 04) -->
+          <div class="premiacoes-ends">
+            <figure class="premiacoes-item" data-reveal="fade-up">
+              <img src="images/Premios02.webp" alt="Premiação Adriana Maia Studio" loading="lazy" decoding="async" />
+              <figcaption>Prêmio Empresárias Empoderadas — Artista Destaque</figcaption>
+            </figure>
+            <figure class="premiacoes-item" data-reveal="fade-up" style="--reveal-delay:80ms">
+              <img src="images/Premios01.webp" alt="Premiação Adriana Maia Studio" loading="lazy" decoding="async" />
+              <figcaption>Premiação em Excelência</figcaption>
+            </figure>
+          </div>
+
+          <!-- col 2, row 1 -->
+          <figure class="premiacoes-item premiacoes-item--destaque" data-reveal="fade-up" style="--reveal-delay:160ms">
+            <img src="images/Premios04.webp" alt="Certificado de Excelência — Adriana Maia Studio" loading="lazy" decoding="async" />
+            <figcaption>Certificado de Excelência</figcaption>
+          </figure>
+
+          <!-- col 1, row 2 -->
+          <figure class="premiacoes-item" data-reveal="fade-up" style="--reveal-delay:240ms">
+            <img src="images/Premios03.webp" alt="Premiação Adriana Maia Studio" loading="lazy" decoding="async" />
+            <figcaption>Prêmio de Qualidade Brazil</figcaption>
+          </figure>
+
+          <!-- col 2, row 2 -->
+          <figure class="premiacoes-item" data-reveal="fade-up" style="--reveal-delay:320ms">
+            <video id="premioPremioVideo" muted playsinline preload="none" controls poster="images/Premios01.webp">
+              <source src="images/VideoPremio.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Momento da Premiação</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CURSOS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="cursos section-pad" id="cursos" aria-label="Cursos oferecidos por Adriana Maia">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="label-tag" data-reveal="fade-up">Ensino</p>
+          <h2 class="title" data-reveal="fade-up" style="--reveal-delay:100ms">
+            Cursos que<br/>ofereço.
+          </h2>
+          <div class="ornament" aria-hidden="true">
+            <svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="1" width="8" height="8" fill="#C9A96E" transform="rotate(45 5 5)"/></svg>
+          </div>
+          <p class="premiacoes__intro" data-reveal="fade-up" style="--reveal-delay:180ms">
+            Compartilho minha técnica e experiência para formar profissionais que entregam resultados de verdade.<br/>
+            Design de Sobrancelhas · Brow Lamination
+          </p>
+        </header>
+
+        <div class="cursos-grid">
+
+          <div class="curso-card" data-reveal="fade-up">
+            <img src="images/Cursos01.webp" alt="Curso Design de Sobrancelhas" loading="lazy" decoding="async" />
+          </div>
+
+          <div class="curso-card" data-reveal="fade-up" style="--reveal-delay:120ms">
+            <img src="images/Cursos02.webp" alt="Curso Brow Lamination" loading="lazy" decoding="async" />
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════
          DEPOIMENTOS
@@ -638,36 +736,55 @@
   <footer class="footer" role="contentinfo">
     <div class="container">
 
+      <div class="footer__location">
+        <div class="footer__map-row">
+          <div class="footer__map" style="border-radius: 8px; overflow: hidden; opacity: .85; width: 340px; height: 340px; flex-shrink: 0;">
+            <iframe
+              src="https://maps.google.com/maps?q=Servid%C3%A3o+Ant%C3%B4nio+Jo%C3%A3o+de+Oliveira,+93,+Boehmerwald,+Joinville,+SC&output=embed"
+              width="340" height="340" style="border:0; display:block;"
+              loading="lazy" allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Adriana Maia Studio — Boehmerwald, Joinville/SC">
+            </iframe>
+          </div>
+          <img
+            src="images/FotoSalao.webp"
+            alt="Salão Adriana Maia Studio"
+            class="footer__salao-photo"
+            width="340" height="340"
+            loading="lazy" decoding="async"
+          />
+        </div>
+
+        <address class="footer__contact" style="font-style:normal">
+          <!-- col 1: sob a foto -->
+          <a href="https://wa.me/5547999581632" target="_blank" rel="noopener noreferrer" class="highlight">(47) 99958-1632</a>
+          <!-- col 2: sob o mapa -->
+          <span style="color:rgba(255,255,255,.4); font-size:.8rem;">Servidão Antônio João de Oliveira, 93<br/>Boehmerwald · Joinville/SC</span>
+
+          <!-- col 1 -->
+          <a href="https://www.instagram.com/adrianamaiastudio/" target="_blank" rel="noopener noreferrer">@adrianamaiastudio</a>
+          <!-- col 2 -->
+          <a href="https://www.google.com/maps/search/?api=1&query=Servid%C3%A3o+Ant%C3%B4nio+Jo%C3%A3o+de+Oliveira,+93,+Boehmerwald,+Joinville,+SC" target="_blank" rel="noopener noreferrer" style="font-size:.8rem; color:rgba(255,255,255,.5);">Ver no Google Maps ↗</a>
+
+          <!-- col 1 -->
+          <a href="https://www.google.com/search?q=Adriana+Maia+Studio+Especialista+em+Sobrancelhas+Joinville" target="_blank" rel="noopener noreferrer" style="font-size:.8rem; color:rgba(255,255,255,.5);">Encontre-nos no Google ↗</a>
+          <!-- col 2 -->
+          <a href="https://mycardbio.com/adrianamaiastudio" target="_blank" rel="noopener noreferrer" style="font-size:.8rem">mycardbio.com/adrianamaiastudio</a>
+        </address>
+      </div>
+
       <div class="footer__top">
+        <div class="footer__logo-wrap">
+          <img src="images/logo-letras.png" alt="Adriana Maia Studio" class="footer__logo" loading="lazy" />
+        </div>
+
         <nav class="footer__nav" aria-label="Links do rodapé">
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
           <a href="#galeria">Galeria</a>
           <a href="https://www.instagram.com/adrianamaiastudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </nav>
-
-        <div class="footer__logo-wrap">
-          <img src="images/logo-letras.png" alt="Adriana Maia Studio" class="footer__logo" loading="lazy" />
-        </div>
-
-        <address class="footer__contact" style="font-style:normal">
-          <a href="https://wa.me/5547999581632" target="_blank" rel="noopener noreferrer" class="highlight">(47) 99958-1632</a>
-          <a href="https://www.instagram.com/adrianamaiastudio/" target="_blank" rel="noopener noreferrer">@adrianamaiastudio</a>
-          <span style="color:rgba(255,255,255,.4); font-size:.8rem;">Servidão Antônio João de Oliveira, 93<br/>Boehmerwald · Joinville/SC</span>
-          <a href="https://www.google.com/maps/search/?api=1&query=Servid%C3%A3o+Ant%C3%B4nio+Jo%C3%A3o+de+Oliveira,+93,+Boehmerwald,+Joinville,+SC" target="_blank" rel="noopener noreferrer" style="font-size:.8rem; color:rgba(255,255,255,.5);">Ver no Google Maps ↗</a>
-          <a href="https://www.google.com/search?q=Adriana+Maia+Studio+Especialista+em+Sobrancelhas+Joinville" target="_blank" rel="noopener noreferrer" style="font-size:.8rem; color:rgba(255,255,255,.5);">Encontre-nos no Google ↗</a>
-          <a href="https://mycardbio.com/adrianamaiastudio" target="_blank" rel="noopener noreferrer" style="font-size:.8rem">mycardbio.com/adrianamaiastudio</a>
-        </address>
-      </div>
-
-      <div class="footer__map" style="margin: 1.5rem 0; border-radius: 8px; overflow: hidden; opacity: .85;">
-        <iframe
-          src="https://maps.google.com/maps?q=Servid%C3%A3o+Ant%C3%B4nio+Jo%C3%A3o+de+Oliveira,+93,+Boehmerwald,+Joinville,+SC&output=embed"
-          width="100%" height="220" style="border:0; display:block;"
-          loading="lazy" allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Localização Adriana Maia Studio — Boehmerwald, Joinville/SC">
-        </iframe>
       </div>
 
       <p class="footer__bottom">
