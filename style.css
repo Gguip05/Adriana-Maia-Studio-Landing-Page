@@ -806,10 +806,6 @@ dialog.lightbox { position: relative; }
   display: block;
 }
 
-.premiacoes-item--destaque {
-  border: 2px solid var(--gold);
-  box-shadow: 0 4px 24px rgba(218,174,96,.25);
-}
 .premiacoes-item--destaque figcaption {
   color: var(--gold);
   font-weight: 600;
