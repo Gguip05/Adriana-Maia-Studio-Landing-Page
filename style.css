@@ -251,6 +251,20 @@ ul, ol { list-style: none; }
   z-index: 150;
 }
 .header__mobile-menu.open { opacity: 1; pointer-events: all; }
+.mobile-menu__close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: .5rem;
+  opacity: .7;
+  transition: opacity var(--dur-fast), color var(--dur-fast);
+}
+.mobile-menu__close:hover { opacity: 1; color: var(--gold); }
 .header__mobile-menu a {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -259,7 +273,7 @@ ul, ol { list-style: none; }
 }
 .header__mobile-menu a:hover { color: var(--gold); }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
   .header__nav { display: none; }
   .header__burger { display: flex; }
 }
@@ -345,13 +359,17 @@ ul, ol { list-style: none; }
   overflow: visible;
 }
 
-/* Gradiente lateral que suaviza a borda esquerda da foto */
+/* Gradiente lateral que suaviza a borda esquerda da foto — só em tela cheia */
 .hero__image-wrap::before {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(to right, var(--vinho-dark) 0%, transparent 22%);
   z-index: 2;
   pointer-events: none;
+  display: none;
+}
+@media (min-width: 1701px) {
+  .hero__image-wrap::before { display: block; }
 }
 
 .hero__photo-frame {
@@ -359,7 +377,7 @@ ul, ol { list-style: none; }
   display: inline-block;
   align-self: flex-start;
   margin-top: 200px;
-  margin-left: -430px;
+  margin-left: -410px;
 }
 
 .hero__photo-frame::after {
@@ -393,27 +411,34 @@ ul, ol { list-style: none; }
   border-right: 1px solid rgba(201,169,110,.4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1500px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
     min-height: auto;
     padding-bottom: 3rem;
   }
   .hero__content {
-    padding: 7rem 1.5rem 1rem;
+    padding: 7rem 1.5rem 1.5rem;
     text-align: center;
   }
   .hero__cta-group { justify-content: center; }
   .hero__image-wrap {
-    order: -1;
-    max-height: 52vw;
-    min-height: 200px;
+    justify-content: center;
+    overflow: visible;
+    padding: 1rem 1.5rem 3rem;
   }
-  .hero__image-wrap::before {
-    background: linear-gradient(to bottom, var(--vinho-dark) 0%, transparent 20%);
+  .hero__photo-frame {
+    margin-left: 0;
+    margin-top: 0;
   }
-  .hero__photo { max-width: 200px; }
+  .hero__photo-frame::after {
+    top: 14px;
+    left: 14px;
+  }
+  .hero__photo {
+    max-width: min(320px, 75vw);
+    height: auto;
+  }
   .hero__scroll-hint { display: none; }
   .hero__deco { display: none; }
 }
@@ -670,6 +695,19 @@ ul, ol { list-style: none; }
   margin-left: auto;
   margin-right: auto;
 }
+/* Lábios: pirâmide abaixo de 1200px — Cliente12 centralizada no topo */
+@media (max-width: 900px) {
+  .gallery-section--lips .gallery-grid--centered {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 560px;
+  }
+  .gallery-section--lips .gallery-grid--centered .gallery-item:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--space-2) / 2);
+  }
+}
+
 /* 4 fotos: grade 2x2 */
 #galleryGrid2 .gallery-grid {
   grid-template-columns: repeat(2, 1fr);
@@ -678,27 +716,15 @@ ul, ol { list-style: none; }
   margin-right: auto;
 }
 
-/* 5 fotos: 3 na 1ª linha + 2 centralizadas na 2ª */
+/* 6 fotos: grade 3x2 */
 #galleryGrid .gallery-grid {
-  grid-template-columns: repeat(6, 1fr);
-}
-#galleryGrid .gallery-grid .gallery-item {
-  grid-column: span 2;
-}
-#galleryGrid .gallery-grid .gallery-item:nth-child(4) {
-  grid-column: 2 / 4;
-}
-#galleryGrid .gallery-grid .gallery-item:nth-child(5) {
-  grid-column: 4 / 6;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 640px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-grid--centered { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
   #galleryGrid .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  #galleryGrid .gallery-grid .gallery-item,
-  #galleryGrid .gallery-grid .gallery-item:nth-child(4),
-  #galleryGrid .gallery-grid .gallery-item:nth-child(5) { grid-column: span 1; }
   .services-grid { grid-template-columns: 1fr; }
   .services-grid .service-card,
   .services-grid .service-card:nth-child(4),
@@ -1058,10 +1084,19 @@ dialog.lightbox { position: relative; }
   letter-spacing: .06em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .footer__location { flex-direction: column; align-items: center; }
-  .footer__contact { text-align: center; }
   .footer__map-row { flex-direction: column; align-items: center; }
+  .footer__contact {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer__contact > *:nth-child(1) { order: 4; }
+  .footer__contact > *:nth-child(2) { order: 1; }
+  .footer__contact > *:nth-child(3) { order: 5; }
+  .footer__contact > *:nth-child(4) { order: 2; }
+  .footer__contact > *:nth-child(5) { order: 6; }
+  .footer__contact > *:nth-child(6) { order: 3; }
 }
 
 /* ── 17. WHATSAPP FLUTUANTE ──────────────────────────────────── */

@@ -46,6 +46,7 @@
       document.body.style.overflow = open ? 'hidden' : '';
     };
     burger.addEventListener('click', toggle);
+    document.getElementById('menuClose')?.addEventListener('click', toggle);
     mobileMenu.querySelectorAll('.mobile-link').forEach((link) => {
       link.addEventListener('click', () => {
         burger.classList.remove('open');
