@@ -832,10 +832,6 @@ dialog.lightbox { position: relative; }
   display: block;
 }
 
-.premiacoes-item--destaque figcaption {
-  color: var(--gold);
-  font-weight: 600;
-}
 
 .cursos { background: var(--cream); }
 
