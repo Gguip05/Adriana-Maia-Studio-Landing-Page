@@ -915,6 +915,7 @@ dialog.lightbox { position: relative; }
 }
 .testimonials-track {
   display: flex;
+  align-items: flex-start;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
